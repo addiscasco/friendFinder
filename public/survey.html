@@ -21,7 +21,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <script src ="htmlRoutes.js"></script>
+    <script src="./htmlRoutes.js"></script>
+    <script src="./apiRoutes.js"></script>
+    <script src="server.js"></script>
+    
 </head>
 
 <body>
@@ -39,26 +42,45 @@
         <input type="password" class="form-control" id="pwd">
     </div>
 
-    <div>
-        <h3> Question 1</h3>
-        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-        <div class="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Action
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">1 </a>
-                <a class="dropdown-item" href="#">2</a>
-                <a class="dropdown-item" href="#">3</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-            </div>
+    <div id="wholeSurvey">
+        <div>
+            <h3> Question 1</h3>
+            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+
+            <select class="form-control" id="ans1">
+                <option>1 (Strongly Disgree)</option>
+                <option>2</option>
+                <option>3 (Neutral)</option>
+                <option>4</option>
+                <option>5 (Strongly Agree) </option>
+            </select>
         </div>
+        <div>
+            <h3> Question 2</h3>
+            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+
+            <select class="form-control" id="ans1">
+                <option>1 (Strongly Disgree)</option>
+                <option>2</option>
+                <option>3 (Neutral)</option>
+                <option>4</option>
+                <option>5 (Strongly Agree) </option>
+            </select>
+        </div>
+        <div>
+            <h3> Question 3</h3>
+            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+
+            <select class="form-control" id="ans1">
+                <option>1 (Strongly Disgree)</option>
+                <option>2</option>
+                <option>3 (Neutral)</option>
+                <option>4</option>
+                <option>5 (Strongly Agree) </option>
+            </select>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="#">Submit</button>
     </div>
-
-
-
-
 </body>
 
 </html>

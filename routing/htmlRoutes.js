@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
 var PORT = 3000;
+// var apiRoute = require("./apiRoutes.js");
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -24,3 +25,5 @@ app.get("/survey", function (req, res) {
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
+
+// module.exports = apiRoute;
