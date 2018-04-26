@@ -1,11 +1,20 @@
 var express = require('express');
-var app = express();
 var bodyParser = require('body-parser');
-   
-app.listen(3000);
+var path = require('path');
+var app = express();
+var PORT = process.env.PORT || 3000;
 
-// be able to use statc css content and a reference to the public folder & express.static use express to statically serve the file (must require path). You can see this at the top of the page of express files
-//app.use = anytime there's request statically give them what's in the public folder
-app.use(express.static(__dirname,'public'));
+var friendData = require(path.join(__dirname, 'app/friends'));
 
-  
+// Sets up the Express app to handle data parsing
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+//require routes in js, pass in app into module express functions 
+require(path.join(__dirname, 'routing/apiRoutes.js'))(app);
+require(path.join(__dirname, 'routing/htmlRoutes.js'))(app);
+
+//listen to port
+app.listen(PORT, function () {
+    console.log("App listening on PORT: " + PORT);
+});

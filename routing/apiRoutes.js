@@ -1,35 +1,45 @@
-// Dependencies
-var express = require("express");
-var bodyParser = require("body-parser");
-var app = express();
-var PORT = 3000;
-var friends = require('.app/data/friends.js');
+var path = require('path');
+var friendData = require(path.join(__dirname, '../app/friends'));
 
-// var htmlRoutes = require("./htmlRoutes.js");
+//exported a function that could accept arguements attaches routes to app
+module.exports = function (app) {
 
-// Sets up the Express app to handle data parsing
-app.use(bodyParser.urlencoded({ extended: true }));
-//somewhere I'll be encoding my JSON
-app.use(bodyParser.json());
-
-// Displays JSON of all possible friends
-function testing(){
-    app.get("./app/data/friends", function (req, res) {
-        return res.json(friendsArray);
-    
+    //some route
+    app.get("/api/friends", function (req, res) {
+        return res.json(friendData);
     });
-}
+    //another route
+    // app.get("/api/survey", function(req, res){
+    //     console.log("COOL");
+    // }); 
+    app.post("/api/friends", function (req, res) {
 
+        var bestMatch = {
+            name: "",
+            photo: "",
+            friendDifference: 1000
+        };
+        console.log(req.body);
+        //take result of the user's survey POST and parse it 
+        var userData = req.body;
+        var userScores = userData.scores;
 
+        var totalDifference = 0;
 
-//handles incoming surveyresults  and handle compatiability logic
-app.post("/api/friends", function (req, res) {
-    res.send("THIS THIS ");
+        for (var i = 0; i < friendsData.length; i++) {
+            console.log(friends[i]);
+            totalDifference = 0;
 
-});
-
-app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
-});
-
-// module.exports = htmlRoutes.js;
+            for (var j = 0; j < friends[i].scores[j]; j++) {
+                totalDifference += Match.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+                if (totalDifference <= bestMath.friendDifference) {
+                    bestMatch.name = friends[i].name;
+                    bestMatch.photo = friends[i].photo;
+                    bestMatcht.friendDifference = totalDifference;
+                }
+            }
+        }
+        friends.push(userData);
+        res.json(bestMatch);
+    });
+};

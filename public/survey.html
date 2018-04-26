@@ -15,20 +15,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <script src="./htmlRoutes.js"></script>
-    <script src="./apiRoutes.js"></script>
+    <script src="htmlRoutes.js"></script>
+    <script src="apiRoutes.js"></script>
     <script src="server.js"></script>
-    
+
 </head>
 
 <body>
-
     <h1>Survey Questions</h1>
 
     <h2>About You</h2>
@@ -46,41 +44,47 @@
         <div>
             <h3> Question 1</h3>
             <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-
             <select class="form-control" id="ans1">
-                <option>1 (Strongly Disgree)</option>
-                <option>2</option>
-                <option>3 (Neutral)</option>
-                <option>4</option>
-                <option>5 (Strongly Agree) </option>
+                <option value="1">1 (Strongly Disgree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Neutral)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree) </option>
             </select>
         </div>
         <div>
             <h3> Question 2</h3>
             <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-
-            <select class="form-control" id="ans1">
-                <option>1 (Strongly Disgree)</option>
-                <option>2</option>
-                <option>3 (Neutral)</option>
-                <option>4</option>
-                <option>5 (Strongly Agree) </option>
+            <select class="form-control" id="ans2">
+                <option value="1">1 (Strongly Disgree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Neutral)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree) </option>
             </select>
         </div>
         <div>
             <h3> Question 3</h3>
             <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-
-            <select class="form-control" id="ans1">
-                <option>1 (Strongly Disgree)</option>
-                <option>2</option>
-                <option>3 (Neutral)</option>
-                <option>4</option>
-                <option>5 (Strongly Agree) </option>
+            <select class="form-control" id="ans3">
+                <option value="1">1 (Strongly Disgree)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Neutral)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree) </option>
             </select>
         </div>
-        <button type="button" class="btn btn-primary" onclick="#">Submit</button>
+        <button type="button" class="btn btn-primary" id="submitAnswers">Submit</button>
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <a href="/api/friends">API Friends Table</a> |
+                <a href="https://github.com/addiscasco/friendFinder">GitHub Repo</a>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
