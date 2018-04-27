@@ -109,7 +109,6 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
@@ -137,7 +136,7 @@
         $.post(currentURL + "/api/friends", userData, function (data) {
            $("#matchName").text(data.name);
            $("#matchImg").attr("src",data.photo);
-            $("#submit").modal("toggle");
+            $("#modal").modal("toggle");
             console.log("it works");
         });
         
