@@ -49,33 +49,4 @@ var friendsArray = [{
         1
     ]
 }];
-
 module.exports = friendsArray;
-
-$("#submitAnswers").on("click", function () {
-    event.preventDefault();
-
-    var userData = {
-      name: $("#name").val(),
-      phoneNumber: $("#photo").val(),
-      scores: [
-          $("#ans1").val(),
-          $("#ans2").val(),
-          $("#ans3").val()
-      ]  
-    };
-
-    //data I want to send 
-    // $.post("/reserve", newReservation, function (data) {
-
-    //   console.log(data);
-
-    //   if (data){
-    //     console.log("reservation is booked");
-    //   }
-
-  });
-  
-
-
-  });

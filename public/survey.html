@@ -32,12 +32,12 @@
     <h2>About You</h2>
 
     <div class="form-group">
-        <label for="usr">Name:</label>
-        <input type="text" class="form-control" id="usr">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name">
     </div>
     <div class="form-group">
-        <label for="pwd">PLACEHOLDER</label>
-        <input type="password" class="form-control" id="pwd">
+        <label for="photo">Photo Please</label>
+        <input type="text" class="form-control" id="photo">
     </div>
 
     <div id="wholeSurvey">
@@ -74,7 +74,13 @@
                 <option value="5">5 (Strongly Agree) </option>
             </select>
         </div>
-        <button type="button" class="btn btn-primary" id="submitAnswers">Submit</button>
+        <button type="button" class="trigger" id="submitAnswers">Submit</button>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h1>HELLO</h1>
+            </div>
+        </div>
     </div>
 
     <footer class="footer">
@@ -86,5 +92,48 @@
         </div>
     </footer>
 </body>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script>
+    $("#submitAnswers").on("click", function (event) {
+        event.preventDefault();
+
+        var userData = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [
+                $("#ans1").val().trim(),
+                $("#ans2").val().trim(),
+                $("#ans3").val().trim()
+            ]
+        };
+
+        $.ajax({
+            type: "GET" ,
+            url: ""
+        }).done(function(userData){
+            $("").modal("show");
+            $("#paragraphInModal").html(userData);
+        })
+
+        console.log("it works");
+
+        // alert("WORK");
+        //grabs URL from the website
+        // var currentURL = window.location.origin;
+        // //data I want to send 
+
+        // $.post(currentURL + "/api/friends", userData, function (data) {
+
+        //   alert("WORK");
+        // });
+    });
+
+
+
+</script>
+
+
 
 </html>
