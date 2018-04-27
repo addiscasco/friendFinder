@@ -122,8 +122,8 @@
         event.preventDefault();
 
         var userData = {
-            name: $("#name").val(),
-            photo: $("#photo").val(),
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
             scores: [
                 $("#ans1").val().trim(),
                 $("#ans2").val().trim(),
