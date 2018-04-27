@@ -20,7 +20,7 @@ Friend Finder is an app that will match you to a friend with the most similariti
 * Node.js
 * body-parser NPM package
 * express NPM package
-* path NPM package
+* path NPM packaget
 * bootstrap
 * j Query
 
