@@ -104,7 +104,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>HELLO</p>
+                        <h2 id ="matchName"></h2>>
+                        <img id="matchImg" src="" alt="image of person you matched">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -134,7 +135,9 @@
         var currentURL = window.location.origin;
 
         $.post(currentURL + "/api/friends", userData, function (data) {
-            // $("#submit").modal("toggle");
+           $("#matchName").text(data.name);
+           $("#matchImg").attr("src",data.photo);
+            $("#submit").modal("toggle");
             console.log("it works");
         });
         
