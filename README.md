@@ -17,17 +17,17 @@ Friend Finder is an app that will match you to a friend with the most similariti
 
 ### Technologies Used 
 
-*Node.js
-*body-parser NPM package
-*express NPM package
-*path NPM package
-*bootstrap
-*jQuery
+* Node.js
+* body-parser NPM package
+* express NPM package
+* path NPM package
+* bootstrap
+*j Query
 
 
 ### Future Improvements
-*CSS must be more user friendly 
-*Modal functunality debug
+* CSS must be more user friendly 
+* Modal functunality debug
 
 ### Contributors
 * Addis Stephanie Casco
