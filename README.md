@@ -21,9 +21,9 @@ Friend Finder is an app that will match you to a friend with the most similariti
 * body-parser NPM package
 * express NPM package
 * path NPM packaget
-* bootstrap
-* j Query
-
+* Bootstrap
+* JavaScript
+* jQuery
 
 ### Future Improvements
 * CSS must be more user friendly 
