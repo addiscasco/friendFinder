@@ -1,0 +1,11 @@
+
+
+.sec #top{
+    background-color: yellow;
+    height: 400px;
+    width: 100%;
+}
+
+.jumbotron{
+    margin-top: 100px;
+}

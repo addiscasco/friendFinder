@@ -14,6 +14,10 @@ app.use(bodyParser.json());
 require(path.join(__dirname, 'routing/apiRoutes.js'))(app);
 require(path.join(__dirname, 'routing/htmlRoutes.js'))(app);
 
+
+// require(path.join(__dirname, 'assets/css/style.css'))(app);
+
+
 //listen to port
 app.listen(PORT, function () {
     console.log("App listening on PORT: " + PORT);
