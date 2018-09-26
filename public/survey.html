@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SURVEY</title>
+    <title>Friend Finder</title>
 
     <script src="htmlRoutes.js"></script>
     <script src="apiRoutes.js"></script>
@@ -31,85 +31,90 @@
 </head>
 
 <body>
-    <h1>Survey Questions</h1>
+    <div class="container">
+        <h1>Survey Questions</h1>
 
-    <h2>About You</h2>
+        <h2>About You</h2>
 
-    <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" class="form-control" id="name">
-    </div>
-    <div class="form-group">
-        <label for="photo">Photo Please</label>
-        <input type="text" class="form-control" id="photo">
-    </div>
-
-    <div id="wholeSurvey">
-        <div>
-            <h3> Question 1</h3>
-            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-            <select class="form-control" id="ans1">
-                <option value="1">1 (Strongly Disgree)</option>
-                <option value="2">2</option>
-                <option value="3">3 (Neutral)</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree) </option>
-            </select>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name">
         </div>
-        <div>
-            <h3> Question 2</h3>
-            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-            <select class="form-control" id="ans2">
-                <option value="1">1 (Strongly Disgree)</option>
-                <option value="2">2</option>
-                <option value="3">3 (Neutral)</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree) </option>
-            </select>
+        <div class="form-group">
+            <label for="photo">Photo Please</label>
+            <input type="text" class="form-control" id="photo">
         </div>
-        <div>
-            <h3> Question 3</h3>
-            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-            <select class="form-control" id="ans3">
-                <option value="1">1 (Strongly Disgree)</option>
-                <option value="2">2</option>
-                <option value="3">3 (Neutral)</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree) </option>
-            </select>
-        </div>
-        <!-- Button trigger modal-->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#submit">
-            Submit
-        </button>
 
-        <footer class="footer">
-            <div class="container">
-                <p>
-                    <a href="/api/friends">API Friends</a> |
-                    <a href="https://github.com/addiscasco/friendFinder">GitHub Repo</a>
-                </p>
+        <div id="wholeSurvey">
+            <div>
+                <h3> Question 1</h3>
+                <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                <select class="form-control" id="ans1">
+                    <option value="1">1 (Strongly Disgree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (Neutral)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree) </option>
+                </select>
             </div>
-        </footer>
+            <div>
+                <h3> Question 2</h3>
+                <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                <select class="form-control" id="ans2">
+                    <option value="1">1 (Strongly Disgree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (Neutral)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree) </option>
+                </select>
+            </div>
+            <div>
+                <h3> Question 3</h3>
+                <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                <select class="form-control" id="ans3">
+                    <option value="1">1 (Strongly Disgree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (Neutral)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree) </option>
+                </select>
+            </div>
+            <br>
+            <!-- Button trigger modal-->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#submit">
+                Submit
+            </button>
+            <br><br>
+
+            <footer class="footer">
+                <div class="container">
+                    <p>
+                        <a href="/api/friends">API Friends</a> |
+                        <a href="https://github.com/addiscasco/friendFinder">GitHub Repo</a>
+                    </p>
+                </div>
+            </footer>
 
 
 
-        <!-- Modal -->
-        <div class="modal fade" id="submit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Your NEW FRIEND</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <h2 id="matchName"></h2>>
-                        <img id="matchImg" src="" alt="image of person you matched">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <!-- Modal -->
+            <div class="modal fade" id="submit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Your NEW FRIEND</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h2 id="matchName"></h2>>
+                            <img id="matchImg" src="" alt="image of person you matched">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
